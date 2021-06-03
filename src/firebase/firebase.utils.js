@@ -23,7 +23,6 @@ export const createUserProfileDocument = async (userAuth, additionalData) => {
   const snapShot = await userRef.get();
 
   if (!snapShot.exists) {
-    console.log(snapShot.data())
     const { displayName, email } = userAuth;
     const createdAt = new Date();
     try {  
@@ -49,3 +48,8 @@ provider.setCustomParameters({ prompt: 'select_account' });
 export const signInWithGoogle = () => auth.signInWithPopup(provider);
 
 export default firebase;
+
+
+
+
+
