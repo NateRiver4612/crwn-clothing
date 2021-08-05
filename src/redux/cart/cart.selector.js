@@ -7,7 +7,7 @@ export const selectCartItems = createSelector(
   cart => cart.cartItems
 );
 
-export const selectCartHidden = createSelector(
+export const selectCartHidden = createSelector( 
     [selectCart],
     cart => cart.hidden 
 );

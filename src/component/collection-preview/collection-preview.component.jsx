@@ -5,7 +5,7 @@ import CollectionItem from '../collection-item/collection-item.component';
 import './collection-preview.styles.scss';
 import { withRouter } from 'react-router-dom';
 
-const CollectionPreview = ({ title,history,match,routeName, items }) => {
+const CollectionPreview = ({ title,history,match,routeName, items }) => { 
   return(
   <div className='collection-preview'>
     <h1 onClick={()=>history.push(`${match.url}/${routeName}`)}   
