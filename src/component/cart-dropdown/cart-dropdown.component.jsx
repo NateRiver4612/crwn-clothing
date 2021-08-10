@@ -7,10 +7,15 @@ import {selectCartItems} from '../../redux/cart/cart.selector';
 import { toggleCartHidden } from '../../redux/cart/cart.actions.js';
 import { withRouter } from 'react-router-dom';
 import { createStructuredSelector } from 'reselect'
+import { cartSaga } from '../../redux/cart/cart.saga';
 
 
 
-const CartDropdown = ({ cartItems ,history,dispatch}) => (
+const CartDropdown = ({ cartItems ,history,dispatch}) => {
+
+  console.log(cartItems)
+
+  return(
   <div className='cart-dropdown'>
     <div className='cart-items'>
       {cartItems.length ? 
@@ -28,6 +33,7 @@ const CartDropdown = ({ cartItems ,history,dispatch}) => (
     </CustomButton>
   </div>
 );
+  }
 
 const mapStateToProps = createStructuredSelector({
   cartItems:selectCartItems
